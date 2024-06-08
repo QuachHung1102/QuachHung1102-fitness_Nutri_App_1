@@ -11,7 +11,7 @@ import {
 
 import {Colors} from 'react-native/Libraries/NewAppScreen';
 
-import QuestionScreen from './src/screens/QuestionScreen';
+import QuestionScreen from './src/screens/WalkthroughScreen/QuestionScreen';
 
 // Import necessary modules
 

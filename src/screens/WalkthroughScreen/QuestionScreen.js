@@ -10,14 +10,14 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 
 import {SwiperFlatList} from 'react-native-swiper-flatlist';
 import {LinearGradient} from 'react-native-linear-gradient';
-import QuestionForm from '../components/QuestionForm';
-import {QuestionData} from '../data/questionData';
-import PrevSvg from '../components/svg/prevSvg';
-import NextSvg from '../components/svg/nextSvg';
+import QuestionForm from '../../components/QuestionForm';
+import {QuestionData} from '../../data/questionData';
+import PrevSvg from '../../components/svg/prevSvg';
+import NextSvg from '../../components/svg/nextSvg';
 
-import {totalDailyEnergyExpenditureCacl} from '../utility/totalDailyEnergyExpenditureCacl';
+import {totalDailyEnergyExpenditureCacl} from '../../utility/totalDailyEnergyExpenditureCacl';
 
-const image = require('../assets/images/backgroundImages/questionBg.jpg');
+const image = require('../../assets/images/backgroundImages/questionBg.jpg');
 const QuestionScreen = () => {
   const [answers, setAnswers] = useState({
     'Mục đích của bạn là:': '',
