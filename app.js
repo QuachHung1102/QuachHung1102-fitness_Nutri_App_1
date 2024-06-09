@@ -12,6 +12,7 @@ import {
 import {Colors} from 'react-native/Libraries/NewAppScreen';
 
 import QuestionScreen from './src/screens/WalkthroughScreen/QuestionScreen';
+import LoginScreen from './src/screens/LoginScreen/login';
 
 // Import necessary modules
 
@@ -40,7 +41,8 @@ const App = () => {
             },
             styles.flex1,
           ]}>
-          <QuestionScreen />
+          {/* <QuestionScreen /> */}
+          <LoginScreen />
         </View>
       </ScrollView>
     </SafeAreaView>
