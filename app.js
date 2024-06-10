@@ -2,19 +2,21 @@ import React from 'react';
 import {
   View,
   StyleSheet,
-  SafeAreaView,
   useColorScheme,
   StatusBar,
   ScrollView,
   Dimensions,
 } from 'react-native';
 
-import {Colors} from 'react-native/Libraries/NewAppScreen';
-
-import QuestionScreen from './src/screens/WalkthroughScreen/QuestionScreen';
-import LoginScreen from './src/screens/LoginScreen/login';
+import {SafeAreaView} from 'react-native-safe-area-context';
 
 // Import necessary modules
+import {Colors} from 'react-native/Libraries/NewAppScreen';
+import QuestionScreen from './src/screens/WalkthroughScreen/QuestionScreen';
+import LoginScreen from './src/screens/LoginScreen/login';
+import WalkthroughScreen from './src/screens/WalkthroughScreen/WalkthroughScreen';
+import WalkthroughAppConfig from './src/data/WalkthroughAppConfig';
+import DynamicAppStyles from './src/screens/DynamicAppStyles';
 
 // Create a functional component for the view
 
@@ -26,25 +28,25 @@ const App = () => {
   };
 
   return (
-    <SafeAreaView style={[backgroundStyle]}>
+    <SafeAreaView style={[backgroundStyle, styles.flex1]}>
       <StatusBar
         barStyle={isDarkMode ? 'light-content' : 'dark-content'}
         backgroundColor={backgroundStyle.backGroundColor}
       />
-      <ScrollView
-        contentInsetAdjustmentBehavior="automatic"
-        style={backgroundStyle}>
-        <View
-          style={[
-            {
-              backgroundColor: isDarkMode ? Colors.black : Colors.white,
-            },
-            styles.flex1,
-          ]}>
-          {/* <QuestionScreen /> */}
-          <LoginScreen />
-        </View>
-      </ScrollView>
+      <View
+        style={[
+          {
+            backgroundColor: isDarkMode ? Colors.black : Colors.white,
+          },
+          styles.flex1,
+        ]}>
+        {/* <QuestionScreen /> */}
+        {/* <LoginScreen /> */}
+        <WalkthroughScreen
+          appConfig={WalkthroughAppConfig}
+          appStyles={DynamicAppStyles}
+        />
+      </View>
     </SafeAreaView>
   );
 };
