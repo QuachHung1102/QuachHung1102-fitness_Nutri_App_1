@@ -11,7 +11,6 @@ import {
   View,
 } from 'react-native';
 import {Button, SocialIcon} from 'react-native-elements';
-import * as Facebook from 'expo-facebook';
 
 const appId = '1047121222092614';
 
@@ -20,24 +19,9 @@ export default function LoginScreen() {
 
   const onFbLoginPress = async () => {
     Alert.alert(
-      `Please use our React Native Starer Kit instead. You can download it for free at https://instamobile.io`,
+      `Bạn sẽ đăng nhập bằng Facebook`,
     );
-    // try {
-    //   await Facebook.initializeAsync({
-    //     appId,
-    //   });
-    //   const { type, token } = await Facebook.logInWithReadPermissionsAsync({
-    //     permissions: ["public_profile", "email"],
-    //   });
-    //   if (type === "success") {
-    //     const response = await fetch(
-    //       `https://graph.facebook.com/me?access_token=${token}`
-    //     );
-    //     Alert.alert("Logged in!", `Hi ${(await response.json()).name}!`);
-    //   }
-    // } catch ({ message }) {
-    //   Alert.alert(`Facebook Login Error: ${message}`);
-    // }
+    
   };
 
   return (
@@ -45,7 +29,7 @@ export default function LoginScreen() {
       <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
         <View style={styles.loginScreenContainer}>
           <View style={styles.loginFormView}>
-            <Text style={styles.logoText}>Instamobile</Text>
+            <Text style={styles.logoText}>Fitness Nutri</Text>
             <TextInput
               placeholder="Username"
               placeholderColor="#c4c3cb"
