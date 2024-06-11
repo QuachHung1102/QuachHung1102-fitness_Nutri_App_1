@@ -18,7 +18,7 @@ import NextSvg from '../../components/svg/nextSvg';
 import {totalDailyEnergyExpenditureCacl} from '../../utility/totalDailyEnergyExpenditureCacl';
 
 const image = require('../../assets/images/backgroundImages/questionBg.jpg');
-const QuestionScreen = () => {
+const QuestionScreen = ({navigation}) => {
   const [answers, setAnswers] = useState({
     'Mục đích của bạn là:': '',
     'Giới tính của bạn là:': '',
@@ -175,6 +175,10 @@ const QuestionScreen = () => {
     const currentIndex = swiperRef.current.getCurrentIndex();
     if (currentIndex < QuestionData.length - 1) {
       swiperRef.current.scrollToIndex({index: currentIndex + 1});
+    } else {
+      if (ready) {
+        navigation.navigate('Walkthrough');
+      }
     }
   };
 

@@ -4,19 +4,16 @@ import {
   StyleSheet,
   useColorScheme,
   StatusBar,
-  ScrollView,
   Dimensions,
 } from 'react-native';
 
 import {SafeAreaView} from 'react-native-safe-area-context';
+import {NavigationContainer} from '@react-navigation/native';
 
 // Import necessary modules
 import {Colors} from 'react-native/Libraries/NewAppScreen';
-import QuestionScreen from './src/screens/WalkthroughScreen/QuestionScreen';
-import LoginScreen from './src/screens/LoginScreen/login';
-import WalkthroughScreen from './src/screens/WalkthroughScreen/WalkthroughScreen';
-import WalkthroughAppConfig from './src/data/WalkthroughAppConfig';
-import DynamicAppStyles from './src/screens/DynamicAppStyles';
+
+import RootNavigator from './src/navigators/RootNavigator';
 
 // Create a functional component for the view
 
@@ -40,12 +37,9 @@ const App = () => {
           },
           styles.flex1,
         ]}>
-        {/* <QuestionScreen /> */}
-        {/* <LoginScreen /> */}
-        <WalkthroughScreen
-          appConfig={WalkthroughAppConfig}
-          appStyles={DynamicAppStyles}
-        />
+        <NavigationContainer>
+          <RootNavigator />
+        </NavigationContainer>
       </View>
     </SafeAreaView>
   );

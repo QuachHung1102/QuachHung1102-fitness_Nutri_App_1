@@ -4,9 +4,8 @@ import PropTypes from 'prop-types';
 import AppIntroSlider from 'react-native-app-intro-slider';
 import dynamicStyles from './styles';
 
-const WalkthroughScreen = props => {
-  const appConfig = props.appConfig; // WalkthroughAppConfig
-  const appStyles = props.appStyles; // DynamicAppStyles
+const WalkthroughScreen = ({route}) => {
+  const {appConfig, appStyles} = route.params;
   const colorScheme = useColorScheme();
   const styles = dynamicStyles(appStyles, colorScheme);
 
