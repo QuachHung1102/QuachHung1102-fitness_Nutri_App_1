@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@react-native-async-storage/async-storage": "^1.23.1",
+    "@react-navigation/core": "^6.4.16",
     "@react-navigation/native": "^6.1.17",
     "@react-navigation/stack": "^6.3.29",
     "@rneui/base": "edge",
@@ -25,7 +26,8 @@
     "react-native-screens": "^3.31.1",
     "react-native-svg": "^15.3.0",
     "react-native-swiper-flatlist": "^3.2.4",
-    "react-native-vector-icons": "^10.1.0"
+    "react-native-vector-icons": "^10.1.0",
+    "react-redux": "^9.1.2"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",

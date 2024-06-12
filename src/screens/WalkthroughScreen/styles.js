@@ -17,24 +17,26 @@ const dynamicStyles = (appStyles, colorScheme) => {
       paddingRight: 10,
     },
     image: {
-      width: 100,
-      height: 100,
+      width: width,
+      borderBottomRightRadius: width / 2, // Làm cong góc dưới bên phải
+      overflow: 'hidden', // Ẩn phần của hình ảnh nằm ngoài ranh giới
       marginBottom: 60,
-      tintColor: 'white',
     },
-    container: {
-    },
+    container: {},
     content: {
       paddingBottom: height * 0.05,
       flex: 1,
-      justifyContent: 'center',
+      justifyContent: 'flex-start',
       alignItems: 'center',
       backgroundColor: appStyles.colorSet[colorScheme].mainThemeForegroundColor,
     },
     button: {
       fontSize: 18,
       color: 'white',
-      marginTop: 10,
+      marginTop: height * 0.025,
+      backgroundColor: '#5244F3',
+      paddingHorizontal: width * 0.1,
+      borderRadius: width * 0.02,
     },
   });
 };
