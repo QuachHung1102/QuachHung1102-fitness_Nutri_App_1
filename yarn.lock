@@ -3322,6 +3322,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/react-native-modalbox@npm:^1.4.14":
+  version: 1.4.14
+  resolution: "@types/react-native-modalbox@npm:1.4.14"
+  dependencies:
+    "@types/react": "*"
+    react-native: "*"
+  checksum: ee7ecc8813d68b41ec2e77848c34be6a45e54eb63d163552c72ce40908746eacfafe693db036b803f1e711c9fecd48f15a41f04c71971ef8857f6af99b829f42
+  languageName: node
+  linkType: hard
+
 "@types/react-native-vector-icons@npm:^6.4.10, @types/react-native-vector-icons@npm:^6.4.6":
   version: 6.4.18
   resolution: "@types/react-native-vector-icons@npm:6.4.18"
@@ -4260,9 +4270,9 @@ __metadata:
   linkType: hard
 
 "caniuse-lite@npm:^1.0.30001629":
-  version: 1.0.30001637
-  resolution: "caniuse-lite@npm:1.0.30001637"
-  checksum: cb8b194b8576c73d287274cf3028541c218da7f2e1871b737e4829796521f45dbb4745fa466e0e56a241693cfe8d00d20ac3e55337f3923e914995d1d5a639a6
+  version: 1.0.30001638
+  resolution: "caniuse-lite@npm:1.0.30001638"
+  checksum: 82e47b2bfac107c662e03bfd3321bfd9493f87240c77a9bfba7ea2cc9e0b81d9238152aed903fb19e60557879e4f48b57e2c6300677391b92a060fbf0a340e30
   languageName: node
   linkType: hard
 
@@ -5684,6 +5694,7 @@ __metadata:
     "@rneui/themed": edge
     "@types/react": ^18.2.6
     "@types/react-native-indicators": ^0.16.6
+    "@types/react-native-modalbox": ^1.4.14
     "@types/react-test-renderer": ^18.0.0
     babel-jest: ^29.6.3
     eslint: ^8.19.0
@@ -5697,7 +5708,9 @@ __metadata:
     react-native-elements: ^3.4.3
     react-native-gesture-handler: ^2.16.2
     react-native-indicators: ^0.17.0
+    react-native-iphone-screen-helper: ^2.1.1
     react-native-linear-gradient: ^2.8.3
+    react-native-modalbox: ^2.0.2
     react-native-safe-area-context: ^4.10.4
     react-native-screens: ^3.31.1
     react-native-svg: ^15.3.0
@@ -8905,6 +8918,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-native-iphone-screen-helper@npm:^2.1.1":
+  version: 2.1.1
+  resolution: "react-native-iphone-screen-helper@npm:2.1.1"
+  peerDependencies:
+    react-native: ">=0.42.0"
+  checksum: 1acbff415fcade41b0f191ea644bc1ef84c7b10b617ca8e82db586f2f3a371a867cca81f39f1971db7b582a42ffbbf804d6b132424635b03d28eeecf4698e84d
+  languageName: node
+  linkType: hard
+
 "react-native-linear-gradient@npm:^2.8.3":
   version: 2.8.3
   resolution: "react-native-linear-gradient@npm:2.8.3"
@@ -8912,6 +8934,15 @@ __metadata:
     react: "*"
     react-native: "*"
   checksum: f980d324e551bbc475c6406bdc5250a08242020cbe653412fa169bbdf51e28a502e225de105b4d696d6a1a1b733d44782469020f4936d8b3ce0e2c78e51cf58f
+  languageName: node
+  linkType: hard
+
+"react-native-modalbox@npm:^2.0.2":
+  version: 2.0.2
+  resolution: "react-native-modalbox@npm:2.0.2"
+  dependencies:
+    prop-types: ^15.5.10
+  checksum: cd1d367c74b67f7aa4efe945cccea5f211d49acd56c054cc151b5741553b479d013a9f2f80d8f8fb3972799af14f1f56668ee7781972b2e26e4af91db0fc191b
   languageName: node
   linkType: hard
 
