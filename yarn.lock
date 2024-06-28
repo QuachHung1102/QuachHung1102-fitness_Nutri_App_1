@@ -5505,6 +5505,26 @@ __metadata:
   languageName: node
   linkType: hard
 
+"expo-image-loader@npm:~4.7.0":
+  version: 4.7.0
+  resolution: "expo-image-loader@npm:4.7.0"
+  peerDependencies:
+    expo: "*"
+  checksum: 1630e988443f87fe86761fb2909e3de88978004a55f769cce7d7965c3ff6e4497e73e9607e826d9a1d5588361b92350e8d4ec0111c9a3243d04a565eddfcf346
+  languageName: node
+  linkType: hard
+
+"expo-image-picker@npm:^15.0.6":
+  version: 15.0.6
+  resolution: "expo-image-picker@npm:15.0.6"
+  dependencies:
+    expo-image-loader: ~4.7.0
+  peerDependencies:
+    expo: "*"
+  checksum: 4c734e1e4a1a997249ac8b615092353c65dcd7cb29e3eab84417eae38e3e9abf74681be0d6e725719a6ff8c45c41251e0aaa9416b8ccc3d8c2b5fb392e241c8d
+  languageName: node
+  linkType: hard
+
 "expo-localization@npm:^15.0.3":
   version: 15.0.3
   resolution: "expo-localization@npm:15.0.3"
@@ -5698,6 +5718,7 @@ __metadata:
     "@types/react-test-renderer": ^18.0.0
     babel-jest: ^29.6.3
     eslint: ^8.19.0
+    expo-image-picker: ^15.0.6
     expo-localization: ^15.0.3
     i18n-js: latest
     jest: ^29.6.3
@@ -5707,6 +5728,7 @@ __metadata:
     react-native-app-intro-slider: ^4.0.4
     react-native-elements: ^3.4.3
     react-native-gesture-handler: ^2.16.2
+    react-native-image-viewing: ^0.2.2
     react-native-indicators: ^0.17.0
     react-native-iphone-screen-helper: ^2.1.1
     react-native-linear-gradient: ^2.8.3
@@ -8903,6 +8925,16 @@ __metadata:
     react: "*"
     react-native: "*"
   checksum: 70da4fc51d92899591aadf03396a8e0b78223fbe71da5b10e76232058c1ef5943d54c1dd8da815d5b6a8b41f259ea9d50457680e2ef7878c88d7396771170ae3
+  languageName: node
+  linkType: hard
+
+"react-native-image-viewing@npm:^0.2.2":
+  version: 0.2.2
+  resolution: "react-native-image-viewing@npm:0.2.2"
+  peerDependencies:
+    react: ">=16.11.0"
+    react-native: ">=0.61.3"
+  checksum: 17f16958ebc00787453d68ca0a695ee5fd9c59865fc525e192de6f200f4b91caa3af3da5a9908e28c94370ea28382074328f917c5398a27b112dd986985f77a0
   languageName: node
   linkType: hard
 
