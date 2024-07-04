@@ -1,8 +1,8 @@
-import React, { useState, useRef, useEffect } from 'react'
-import { View, Text, TouchableOpacity, ScrollView, Modal } from 'react-native'
-import Checkbox from 'expo-checkbox'
-import { useTheme, useTranslations } from '../../../core'
-import dynamicStyles from './styles'
+import React, { useState, useRef, useEffect } from 'react';
+import { View, Text, TouchableOpacity, ScrollView, Modal } from 'react-native';
+import Checkbox from 'expo-checkbox';
+import { useTheme, useTranslations } from '../../../core';
+import dynamicStyles from './styles';
 
 export const DropdownPicker = ({
   title,
@@ -11,48 +11,48 @@ export const DropdownPicker = ({
   allowMultipleSelection = false,
   selectedItemsList = [],
 }) => {
-  const { localized } = useTranslations()
-  const { theme, appearance } = useTheme()
-  const styles = dynamicStyles(theme, appearance)
+  const { localized } = useTranslations();
+  const { theme, appearance } = useTheme();
+  const styles = dynamicStyles(theme, appearance);
 
-  const dropdownButton = useRef()
-  const [selectedItems, setSelectedItems] = useState([])
-  const [showDropDown, setShowDropDown] = useState(false)
-  const [dropdownLocation, setDropdownLocation] = useState(0)
+  const dropdownButton = useRef();
+  const [selectedItems, setSelectedItems] = useState([]);
+  const [showDropDown, setShowDropDown] = useState(false);
+  const [dropdownLocation, setDropdownLocation] = useState(0);
 
   useEffect(() => {
     allowMultipleSelection
       ? setSelectedItems(selectedItemsList)
-      : setSelectedItems([selectedItemsList[0]])
-  }, [])
+      : setSelectedItems([selectedItemsList[0]]);
+  }, []);
 
   const onDropdownItemPress = item => {
-    let tempArr = JSON.parse(JSON.stringify(selectedItems))
+    let tempArr = JSON.parse(JSON.stringify(selectedItems));
     if (selectedItems.includes(item)) {
-      setSelectedItems(tempArr.filter(x => x !== item))
+      setSelectedItems(tempArr.filter(x => x !== item));
     } else if (allowMultipleSelection) {
-      tempArr.push(item)
-      setSelectedItems(tempArr)
+      tempArr.push(item);
+      setSelectedItems(tempArr);
     } else {
-      setSelectedItems([item])
-      setShowDropDown(false)
-    }
-  }
+      setSelectedItems([item]);
+      setShowDropDown(false);
+    };
+  };
 
   const onDropDownDismiss = () => {
-    onSelectItem(selectedItems)
-  }
+    onSelectItem(selectedItems);
+  };
 
   const toggleDropdown = () => {
-    showDropDown ? setShowDropDown(false) : openDropdown()
-  }
+    showDropDown ? setShowDropDown(false) : openDropdown();
+  };
 
   const openDropdown = () => {
     dropdownButton.current.measure((fx, fy, w, h, px, py) => {
-      setDropdownLocation({ top: py + h, left: px })
-    })
-    setShowDropDown(true)
-  }
+      setDropdownLocation({ top: py + h, left: px });
+    });
+    setShowDropDown(true);
+  };
 
   const renderDropdown = () => {
     return (
@@ -95,8 +95,8 @@ export const DropdownPicker = ({
           </View>
         </TouchableOpacity>
       </Modal>
-    )
-  }
+    );
+  };
 
   return (
     <View style={styles.container}>
@@ -118,5 +118,5 @@ export const DropdownPicker = ({
         {renderDropdown()}
       </View>
     </View>
-  )
-}
+  );
+};

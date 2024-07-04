@@ -1,12 +1,12 @@
-import React from 'react'
-import { TextInput, View, Text } from 'react-native'
-import { useTheme, useTranslations } from '../../../core'
-import dynamicStyles from './styles'
+import React from 'react';
+import { TextInput, View, Text } from 'react-native';
+import { useTheme, useTranslations } from '../../../core';
+import dynamicStyles from './styles';
 
 export const FormTextInput = ({ title, type, onChangeText, value }) => {
-  const { localized } = useTranslations()
-  const { theme, appearance } = useTheme()
-  const styles = dynamicStyles(theme, appearance)
+  const { localized } = useTranslations();
+  const { theme, appearance } = useTheme();
+  const styles = dynamicStyles(theme, appearance);
   return (
     <View style={styles.container}>
       <View style={styles.titleContainer}>
@@ -19,5 +19,5 @@ export const FormTextInput = ({ title, type, onChangeText, value }) => {
         onChangeText={onChangeText}
       />
     </View>
-  )
-}
+  );
+};

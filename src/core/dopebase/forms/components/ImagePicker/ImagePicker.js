@@ -1,8 +1,8 @@
-import React, { useState } from 'react'
-import { Image, Text, TouchableOpacity, View } from 'react-native'
-import * as ExpoImagePicker from 'expo-image-picker'
-import { useTheme, useTranslations } from '../../../core'
-import dynamicStyles from './styles'
+import React, { useState } from 'react';
+import { Image, Text, TouchableOpacity, View } from 'react-native';
+import * as ExpoImagePicker from 'expo-image-picker';
+import { useTheme, useTranslations } from '../../../core';
+import dynamicStyles from './styles';
 
 export const ImagePicker = ({
   title,
@@ -23,9 +23,9 @@ export const ImagePicker = ({
       allowsEditing: !allowsMultipleSelection,
       aspect: [4, 3],
       quality: 1,
-    })
+    });
 
-    if (!result?.cancelled) {
+    if (!result?.canceled) {
       /*
       Sample Return Structure, Array of Images
        [{"assetId": "99D53A1F-FEEF-40E1-8BB3-7DD55A43C8B7/L0/001",
@@ -37,10 +37,10 @@ export const ImagePicker = ({
        "width": 3000
        }]
        */
-      handleImages(result?.selected ? result?.selected : result)
-      setImage(result)
-    }
-  }
+      handleImages(result?.selected ? result?.selected : result);
+      setImage(result);
+    };
+  };
 
   return (
     <View style={styles.container}>
@@ -69,5 +69,5 @@ export const ImagePicker = ({
         </TouchableOpacity>
       </View>
     </View>
-  )
-}
+  );
+};

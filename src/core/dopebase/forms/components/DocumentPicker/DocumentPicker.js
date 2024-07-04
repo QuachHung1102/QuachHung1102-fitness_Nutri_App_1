@@ -1,31 +1,31 @@
-import React, { useState } from 'react'
-import { View, Text, TouchableOpacity } from 'react-native'
-import * as ExpoDocumentPicker from 'expo-document-picker'
-import { useTheme, useTranslations } from '../../..'
-import dynamicStyles from './styles'
+import React, { useState } from 'react';
+import { View, Text, TouchableOpacity } from 'react-native';
+import * as ExpoDocumentPicker from 'expo-document-picker';
+import { useTheme, useTranslations } from '../../..';
+import dynamicStyles from './styles';
 
 export const DocumentPicker = ({ title, handleDocument = () => {} }) => {
-  const { localized } = useTranslations()
-  const { theme, appearance } = useTheme()
-  const styles = dynamicStyles(theme, appearance)
-  const [document, setDocument] = useState()
+  const { localized } = useTranslations();
+  const { theme, appearance } = useTheme();
+  const styles = dynamicStyles(theme, appearance);
+  const [document, setDocument] = useState();
 
   const pickDocument = async () => {
     try {
-      let res = await ExpoDocumentPicker.getDocumentAsync()
+      let res = await ExpoDocumentPicker.getDocumentAsync();
       if (res?.type !== 'cancel') {
         const doc = {
           ...res,
           type: 'file',
           fileID: +new Date() + res.name,
         }
-        setDocument(doc)
-        handleDocument(doc)
+        setDocument(doc);
+        handleDocument(doc);
       }
     } catch (e) {
       console.warn(e)
-    }
-  }
+    };
+  };
 
   return (
     <View style={styles.container}>
@@ -51,5 +51,5 @@ export const DocumentPicker = ({ title, handleDocument = () => {} }) => {
         </TouchableOpacity>
       </View>
     </View>
-  )
-}
+  );
+};

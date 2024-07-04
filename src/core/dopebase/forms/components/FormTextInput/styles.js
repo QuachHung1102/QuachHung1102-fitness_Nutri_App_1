@@ -1,8 +1,8 @@
-import { I18nManager, StyleSheet, Platform, Dimensions } from 'react-native'
+import { I18nManager, StyleSheet, Platform, Dimensions } from 'react-native';
 
 const dynamicStyles = (theme, colorScheme) => {
-  const colorSet = theme.colors[colorScheme]
-  const windowWidth = Dimensions.get('window').width
+  const colorSet = theme.colors[colorScheme];
+  const windowWidth = Dimensions.get('window').width;
   return StyleSheet.create({
     container: {
       marginLeft: 32,
@@ -61,7 +61,7 @@ const dynamicStyles = (theme, colorScheme) => {
       borderColor: colorSet.grey6,
       paddingLeft: 20,
     },
-  })
-}
+  });
+};
 
-export default dynamicStyles
+export default dynamicStyles;

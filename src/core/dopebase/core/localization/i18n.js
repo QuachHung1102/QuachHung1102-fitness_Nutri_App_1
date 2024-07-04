@@ -29,7 +29,7 @@ export const TranslationProvider = ({ children, translations }) => {
     );
 
     // If we have a locale stored in local storage, that is high priority (it overrides the current device locale)
-    setLocale(localeJSON !== null ? localeJSON : Localization.locale);
+    setLocale(localeJSON !== null ? localeJSON : Localization.getLocales()[0].languageTag);
   }, [setLocale]);
 
   useEffect(() => {
@@ -47,7 +47,7 @@ export const TranslationProvider = ({ children, translations }) => {
     I18n.translations = translations;
     I18n.locale = locale;
     I18n.fallbacks = true;
-    I18nManager.forceRTL(Localization.isRTL);
+    I18nManager.forceRTL(Localization.getLocales()[0].textDirection === 'rtl' ? true : false);
   };
 
   const value = {

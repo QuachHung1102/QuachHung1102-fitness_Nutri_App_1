@@ -1,16 +1,16 @@
-import React, { useState } from 'react'
-import { View, Text, Switch } from 'react-native'
-import { useTheme } from '../../../core'
-import dynamicStyles from './styles'
+import React, { useState } from 'react';
+import { View, Text, Switch } from 'react-native';
+import { useTheme } from '../../../core';
+import dynamicStyles from './styles';
 
 export const FormSwitch = ({ title, isSelected = false, onToggleSwitch }) => {
-  const { theme, appearance } = useTheme()
-  const styles = dynamicStyles(theme, appearance)
+  const { theme, appearance } = useTheme();
+  const styles = dynamicStyles(theme, appearance);
 
-  const [isEnabled, setIsEnabled] = useState(isSelected)
+  const [isEnabled, setIsEnabled] = useState(isSelected);
   const toggleSwitch = () => {
-    setIsEnabled(previousState => !previousState)
-    onToggleSwitch && onToggleSwitch(!isEnabled)
+    setIsEnabled(previousState => !previousState);
+    onToggleSwitch && onToggleSwitch(!isEnabled); // if onToggleSwitch is provided, call it with the new value
   }
   return (
     <View style={styles.container}>
@@ -25,5 +25,5 @@ export const FormSwitch = ({ title, isSelected = false, onToggleSwitch }) => {
         value={isEnabled}
       />
     </View>
-  )
-}
+  );
+};

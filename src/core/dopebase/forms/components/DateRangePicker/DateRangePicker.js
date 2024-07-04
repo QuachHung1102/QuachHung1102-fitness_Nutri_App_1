@@ -1,31 +1,31 @@
-import React, { useEffect, useState } from 'react'
-import { Modal, SafeAreaView, Text, View, TouchableOpacity } from 'react-native'
-import { useTheme } from '../../../core'
-import { useTranslations } from '../../..'
-import dynamicStyles from './styles'
-import { Calendar } from 'react-native-calendars'
-import moment from 'moment'
+import React, { useEffect, useState } from 'react';
+import { Modal, SafeAreaView, Text, View, TouchableOpacity } from 'react-native';
+import { useTheme } from '../../../core';
+import { useTranslations } from '../../..';
+import dynamicStyles from './styles';
+import { Calendar } from 'react-native-calendars';
+import moment from 'moment';
 
 export const DateRangePicker = props => {
-  const { localized } = useTranslations()
-  const { theme, appearance } = useTheme()
-  const styles = dynamicStyles(theme, appearance)
+  const { localized } = useTranslations();
+  const { theme, appearance } = useTheme();
+  const styles = dynamicStyles(theme, appearance);
 
-  const { title } = props
+  const { title } = props;
 
-  const [isVisible, setIsVisible] = useState(false)
-  const [selectedDays, setSelectedDays] = useState()
-  const [startDay, setStartDay] = useState(props.startDay)
-  const [endDay, setEndDay] = useState(props.endDay)
+  const [isVisible, setIsVisible] = useState(false);
+  const [selectedDays, setSelectedDays] = useState();
+  const [startDay, setStartDay] = useState(props.startDay);
+  const [endDay, setEndDay] = useState(props.endDay);
 
   useEffect(() => {
-    setSelectedDays(getSelectedDateRange(props.startDay, props.endDay))
-  }, [])
+    setSelectedDays(getSelectedDateRange(props.startDay, props.endDay));
+  }, []);
 
   const getSelectedDateRange = (startDayString, endDayString) => {
-    const selectedDays = {}
-    const tempStartDay = moment(startDayString)
-    const tempEndDay = moment(endDayString)
+    const selectedDays = {};
+    const tempStartDay = moment(startDayString);
+    const tempEndDay = moment(endDayString);
 
     for (
       let day = tempStartDay;
@@ -40,7 +40,7 @@ export const DateRangePicker = props => {
       }
     }
 
-    return selectedDays
+    return selectedDays;
   }
 
   const onDayPress = day => {
@@ -51,23 +51,23 @@ export const DateRangePicker = props => {
     } else {
       setEndDay(day.dateString)
       setSelectedDays(getSelectedDateRange(startDay, day.dateString))
-    }
-  }
+    };
+  };
 
   const onDayLongPress = () => {
-    setSelectedDays({})
-  }
+    setSelectedDays({});
+  };
 
   const onCancel = () => {
-    setIsVisible(false)
-  }
+    setIsVisible(false);
+  };
 
   const onDone = () => {
     if (Object.keys(selectedDays).length) {
-      props.onDone({ startDay: startDay, endDay: endDay })
-      setIsVisible(false)
-    }
-  }
+      props.onDone({ startDay: startDay, endDay: endDay });
+      setIsVisible(false);
+    };
+  };
 
   return (
     <>
@@ -112,5 +112,5 @@ export const DateRangePicker = props => {
         </SafeAreaView>
       </Modal>
     </>
-  )
-}
+  );
+};

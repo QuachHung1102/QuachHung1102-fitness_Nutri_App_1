@@ -1,7 +1,7 @@
-import { StyleSheet, Platform } from 'react-native'
+import { StyleSheet, Platform } from 'react-native';
 
 const dynamicStyles = (theme, colorScheme) => {
-  const colorSet = theme.colors[colorScheme]
+  const colorSet = theme.colors[colorScheme];
   return StyleSheet.create({
     container: {
       marginLeft: 30,
@@ -64,7 +64,7 @@ const dynamicStyles = (theme, colorScheme) => {
       height: 64,
       borderRadius: 10,
     },
-  })
-}
+  });
+};
 
-export default dynamicStyles
+export default dynamicStyles;
