@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "309397476066",
+    "project_id": "authmanager-401f6",
+    "storage_bucket": "authmanager-401f6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:309397476066:android:903c902a1001151f2504bb",
+        "android_client_info": {
+          "package_name": "com.fitness_nutri_app_1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "309397476066-8rovlrih6j498s4jgil7n1fc4fvm1rg7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.fitness_nutri_app_1",
+            "certificate_hash": "805b0ea3b873bf62a8aa8118915932627eb1ea19"
+          }
+        },
+        {
+          "client_id": "309397476066-5sustdh73eqntdkh5gngq10kfec2gsi4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCgGuVFc5GceiwIv1g0WQ7TjesBrzDtnQE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "309397476066-5sustdh73eqntdkh5gngq10kfec2gsi4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
