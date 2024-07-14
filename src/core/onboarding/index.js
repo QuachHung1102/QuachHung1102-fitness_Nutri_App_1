@@ -7,3 +7,4 @@ export { default as SmsAuthenticationScreen } from './screens/SmsAuthenticationS
 export { default as ResetPasswordScreen } from './screens/ResetPasswordScreen/ResetPasswordScreen'
 export { default as DelayedLoginScreen } from './screens/DelayedLogin/DelayedLoginScreen'
 export { default as useCurrentUser } from './hooks/useCurrentUser'
+export { default as QuestionScreen } from '../../screens/WalkthroughScreen/QuestionScreen'

@@ -15,7 +15,7 @@ export const ConfigProvider = ({ children }) => {
     isFacebookAuthEnabled: true,
     forgotPasswordEnabled: true,
     appIdentifier: `com.fitness_nutri_app_1.rn.${Platform.OS}`,
-    facebookIdentifier: '309397476066',
+    facebookIdentifier: '471719465581703',
     webClientId:
       '1099201876026-7p9f7c1ukg55958ck45fc0bn0luilka4.apps.googleusercontent.com',
     onboardingConfig: {

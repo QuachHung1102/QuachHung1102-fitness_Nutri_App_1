@@ -18,7 +18,7 @@ const RootNavigator = () => {
         headerShown: false,
         animationEnabled: false,
       }}
-      initialRouteName="Walkthrough">
+      initialRouteName="Login">
       <Root.Screen name="Login" component={LoginScreen} />
       <Root.Screen name="Question" component={QuestionScreen} />
       <Root.Screen

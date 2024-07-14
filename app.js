@@ -1,57 +1,51 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { LogBox, Text, View } from 'react-native';
+import { Provider } from 'react-redux';
+import SplashScreen from 'react-native-splash-screen';
+import { MenuProvider } from 'react-native-popup-menu';
 import {
-  View,
-  StyleSheet,
-  useColorScheme,
-  StatusBar,
-  Dimensions,
-} from 'react-native';
+  DopebaseProvider,
+  extendTheme,
+  TranslationProvider,
+  ActionSheetProvider,
+} from './src/core/dopebase';
+import configureStore from './src/redux/store';
+import AppContent from './src/AppContent';
+import translations from './src/translations/';
+import { ConfigProvider } from './src/config';
+import { AuthProvider } from './src/core/onboarding/hooks/useAuth';
+import { authManager } from './src/core/onboarding/api';
+import InstamobileTheme from './src/theme';
 
-import {SafeAreaView} from 'react-native-safe-area-context';
-import {NavigationContainer} from '@react-navigation/native';
-
-// Import necessary modules
-import {Colors} from 'react-native/Libraries/NewAppScreen';
-
-import RootNavigator from './src/navigators/RootNavigator';
-
-// Create a functional component for the view
+const store = configureStore()
 
 const App = () => {
-  const isDarkMode = useColorScheme() === 'dark';
+  const theme = extendTheme(InstamobileTheme)
 
-  const backgroundStyle = {
-    backGroundColor: isDarkMode ? Colors.darker : Colors.lighter,
-  };
-
+  useEffect(() => {
+    SplashScreen.hide()
+    LogBox.ignoreAllLogs(true)
+  }, [])
   return (
-    <SafeAreaView style={[backgroundStyle, styles.flex1]}>
-      <StatusBar
-        barStyle={isDarkMode ? 'light-content' : 'dark-content'}
-        backgroundColor={backgroundStyle.backGroundColor}
-      />
-      <View
-        style={[
-          {
-            backgroundColor: isDarkMode ? Colors.black : Colors.white,
-          },
-          styles.flex1,
-        ]}>
-        <NavigationContainer>
-          <RootNavigator />
-        </NavigationContainer>
-      </View>
-    </SafeAreaView>
-  );
-};
+    // <Provider store={store}>
+    //   <TranslationProvider translations={translations}>
+    //     <DopebaseProvider theme={theme}>
+    //       <ConfigProvider>
+    //         <AuthProvider authManager={authManager}>
+    //           <MenuProvider>
+    //             <ActionSheetProvider>
+    //               <AppContent />
+    //             </ActionSheetProvider>
+    //           </MenuProvider>
+    //         </AuthProvider>
+    //       </ConfigProvider>
+    //     </DopebaseProvider>
+    //   </TranslationProvider>
+    // </Provider>
+    <View>
+      <Text>App</Text>
+    </View>
+  )
+}
 
-// Define styles for the view
-
-const {width, height} = Dimensions.get('window');
-const styles = StyleSheet.create({
-  flex1: {
-    height,
-  },
-});
-
-export default App;
+export default App
